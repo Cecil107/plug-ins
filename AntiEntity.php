@@ -1,6 +1,6 @@
 <?php
 
-namespace AntiEntiti;
+namespace AntiEntity;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
