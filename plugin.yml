@@ -1,5 +1,0 @@
-name: ClearEntity
-main: ClearEntity\EntitiesCleaner
-version: 0.1-test
-author: Cecil107
-api: [1.4.1]
