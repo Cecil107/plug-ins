@@ -1,0 +1,17 @@
+name: Text
+main: src/Text
+version: 1.1.0
+api: 1.0.0
+author: Cecil107
+permissions:
+ text:
+commands:
+ text:
+  permission: text.text
+  description: buu
+  default: true
+  description: Top permission
+  children:
+   text.text:
+    default: true
+    description:
