@@ -12,15 +12,25 @@ use pocketmine\level\position;
     class Text extends PluginBase {
     
     public function onEnable(){
-      $this->getLogger()->info("onEneble() has been called!");
+      $this->getLogger()->info("Online!");
     }
     public function onDisable() {
-      $this->getLogger()->info("onDisable() has been called!");  
+      $this->getLogger()->info("Offline!");  
     }	}
     
-	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-		switch($command->getName(text)){
-			case "text":
-                            .->addParticle(new FloatingTextParticle (new Vector3($player->getX(), $player->getY(), $player->getZ()), "§1Hello §aWorld§l!"), [$player])
-                                $sender->sendMessage("§1Hotovo §3panne§l!")
-                                }}}
+class Text1 extends BasePlugin implements Listener{
+
+ private $particles = [];
+
+ public function onEnable(){
+  $this->getServer()->getPluginManager()->registerEvents($this, $this);
+  $this->particles[] = new FloatingTextParticle(new Vector3($player->getX(), $player->getY(), $player->getZ()), "", TextFormat::GREEN . "Welcome back!");
+ }
+
+ public function onPlayerJoin(PlayerJoinEvent $event){
+  foreach($this->particles as $particle){
+   $event->getPlayer()->getLevel()->addParticle($particle, [$event->getPlayer()]);
+  }
+ }
+
+}}
