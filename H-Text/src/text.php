@@ -11,9 +11,6 @@ use pocketmine\level\position;
 
 class text extends PluginBase implements Listener{
     
-    public function onEnable(){
-      $this->getLogger()->info("Online!");
-    }
     public function onDisable() {
       $this->getLogger()->info("Offline!");  
     }
