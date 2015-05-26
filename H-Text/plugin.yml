@@ -1,5 +1,5 @@
 name: Text
-main: src/Text
+main: text
 version: 1.1.0
 api: 1.0.0
 author: Cecil107
