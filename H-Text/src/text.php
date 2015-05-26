@@ -9,7 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\level\position;
 
-class text extends PluginBase implements Listener{
+class Text extends PluginBase implements Listener{
     
     public function onDisable() {
       $this->getLogger()->info("Offline!");  
