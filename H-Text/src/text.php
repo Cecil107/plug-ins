@@ -25,6 +25,7 @@ class Text extends PluginBase implements Listener{
  public function onPlayerJoin(PlayerJoinEvent $event){
   foreach($this->particles as $particle){
    $event->getPlayer()->getLevel()->addParticle($particle, [$event->getPlayer()]);
+   $p->addSound(new Explode(new Vector3($player->getX(), $player->getY(), $player->getZ()); 
   }
  }
 
