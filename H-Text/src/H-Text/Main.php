@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener{
 
  private $particles = [];
 
- public function onEnable(){ // Why do you have two onEnable()'s? It can only be enabled once
+ public function onEnable(){
   $this->getServer()->getPluginManager()->registerEvents($this, $this);
   $this->particles[] = new FloatingTextParticle(new Vector3($player->getX(), $player->getY(), $player->getZ()), "", TextFormat::GREEN . "Welcome back!");
  }
