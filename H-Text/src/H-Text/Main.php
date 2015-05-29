@@ -1,6 +1,6 @@
 <?php
 
-namespace Text;
+namespace H-Text;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Command;
@@ -9,7 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\level\position;
 
-class Text extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener{
     
     public function onDisable() {
       $this->getLogger()->info("Offline!");  
