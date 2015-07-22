@@ -1,32 +1,22 @@
 <?php
 
-namespace H-Text;
+namespace HText;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\Command;
-use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
-use pocketmine\Player;
 use pocketmine\level\position;
+use pocketmine\math\Vector3;
+use pocketmine\level\particle\FloatingTextParticle;
 
 class Main extends PluginBase implements Listener{
-    
+
     public function onDisable() {
-      $this->getLogger()->info("Offline!");  
+        $this->getLogger()->info("Off!");
     }
-
- private $particles = [];
-
- public function onEnable(){
-  $this->getServer()->getPluginManager()->registerEvents($this, $this);
-  $this->particles[] = new FloatingTextParticle(new Vector3($player->getX(), $player->getY(), $player->getZ()), "", TextFormat::GREEN . "Welcome back!");
- }
-
- public function onPlayerJoin(PlayerJoinEvent $event){
-  foreach($this->particles as $particle){
-   $event->getPlayer()->getLevel()->addParticle($particle, [$event->getPlayer()]);
-   $p->addSound(new Explode(new Vector3($player->getX(), $player->getY(), $player->getZ()); 
-  }
- }
-
+    private $particles = [];
+    public function onEnable(){
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->particles[] = new FloatingTextParticle(new Vector3(554, 104, -114), "", TextFormat::GOLD . "Vtej na Mesru!");
+        $this->getLogger()->info("On!");
+    }
 }
