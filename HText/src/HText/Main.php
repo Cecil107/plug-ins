@@ -4,7 +4,6 @@ namespace HText;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\level\position;
 use pocketmine\math\Vector3;
 use pocketmine\level\particle\FloatingTextParticle;
 
@@ -16,7 +15,7 @@ class Main extends PluginBase implements Listener{
     private $particles = [];
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->particles[] = new FloatingTextParticle(new Vector3(554, 104, -114), "", TextFormat::GOLD . "Vtej na Mesru!");
+        $this->particles[] = new FloatingTextParticle(new Vector3(554, 104, -114), "", TextFormat::GOLD . "Vítej na Mesru!");
         $this->getLogger()->info("On!");
     }
 }
